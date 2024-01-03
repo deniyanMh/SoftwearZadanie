@@ -33,7 +33,7 @@ namespace GitExercise
         }
         public static void SubtractAbs(double a, double b)
         {
-            Console.WriteLine($"|{a} : {b}| = {Math.Abs(a-b)}");
+            Console.WriteLine($"|{a} - {b}| = {Math.Abs(a-b)}");
         }
     }
 }
