@@ -5,10 +5,14 @@ namespace GitExercise
     public static class OptionsManager
     {
         public static string[] OptionsList = {
-            "a - Add",
-            "s - Subtract",
-            "m - Multiply"
-        };
+        "a - Add",
+        "s - subtract",
+        "m - Multiply",
+        "pow - Power",
+        "log - Logarithm",
+        "fact - Sum of 2 factorials"
+     };
+
 
         public static void Add(double a, double b)
         {
@@ -23,6 +27,32 @@ namespace GitExercise
         public static void Subtract(double a, double b)
         {
             Console.WriteLine($"{a} - {b} = {a - b}");
+        }
+
+        public static void Power(double a, double b)
+        {
+            Console.WriteLine($"{a} ^ {b} = {Math.Pow(a, b)}");
+        }
+        public static void Log(double a, double b)
+        {
+            Console.WriteLine($"Log og {a} with base {b} = {Math.Pow(a, b)}");
+        }
+
+        public static void Factorial(double a, double b)
+        {
+            long factA = CalculateFact((int)a);
+            long factB = CalculateFact((int)b);
+            Console.WriteLine($"{a}! + {b}! = {(int)a}! + {(int)b}l = {factA + factB}");
+        }
+        private static long CalculateFact(int a)
+        {
+            long result = a;
+            for (int i = a - 1; i >= 1; i--)
+            {
+                result = result * i;
+            }
+
+        return result;
         }
     }
 }
